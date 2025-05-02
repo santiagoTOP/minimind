@@ -225,7 +225,7 @@ class MoEGate(nn.Module):
         self.scoring_func = config.scoring_func
         self.alpha = config.aux_loss_alpha
         self.seq_aux = config.seq_aux
-
+        
         self.norm_topk_prob = config.norm_topk_prob
         self.gating_dim = config.hidden_size
         self.weight = nn.Parameter(torch.empty((self.n_routed_experts, self.gating_dim)))
